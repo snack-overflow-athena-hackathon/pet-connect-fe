@@ -12,7 +12,7 @@ export const getAllPets = () => {
 };
 
 export const getSinglePet = (id) => {
-  return petConnectApi.get(`/Pets/ByPetId/${id}`).then(({ data }) => {
+  return petConnectApi.get(`/Pets/${id}`).then(({ data }) => {
     console.log(data);
     return data;
   });

@@ -1,13 +1,16 @@
 import { Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-export const PetCard = ({ name, location, pictureUrl, ownerId }) => {
+export const PetCard = ({ name, location, pictureUrl, ownerId, id }) => {
   return (
     <Card style={{ width: "18rem", margin: "15px" }}>
-      <Card.Img
-        style={{ borderBottom: "1px solid white" }}
-        variant="top"
-        src={pictureUrl}
-      />
+      <Link to={`/pets/${id}`}>
+        <Card.Img
+          style={{ borderBottom: "1px solid white" }}
+          variant="top"
+          src={pictureUrl}
+        />
+      </Link>
       <Card.Body style={{ backgroundColor: "#607744" }}>
         <Card.Title style={{ backgroundColor: "#607744" }}>{name}</Card.Title>
         <Card.Text style={{ backgroundColor: "#607744" }}>
@@ -16,7 +19,9 @@ export const PetCard = ({ name, location, pictureUrl, ownerId }) => {
         <Card.Text style={{ backgroundColor: "#607744" }}>
           Belongs to: {ownerId}
         </Card.Text>
-        <Button variant="dark">View Pet</Button>
+        <Link to={`/pets/${id}`}>
+          <Button variant="dark">View Pet</Button>
+        </Link>
       </Card.Body>
     </Card>
   );

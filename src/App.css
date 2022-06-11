@@ -14,6 +14,7 @@
   align-items: center;
 }
 
+
 .App-header {
   background-color: #282c34;
   /* min-height: 100vh; */
@@ -28,15 +29,51 @@
   width: 320px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
 .PetList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
+
+a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+::after {
+  color: #607744 !important;
+}
+
+
+a.nav-link {
+  color: #607744 !important;
+}
+
+a.nav-link.active {
+  background-color: #607744 !important;
+  color: white !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #607744 !important;
+}
+
+a.nav-link:hover {
+  color: #8eaf66 !important;
+  transition: 0.3;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: #fff !important;
+  background-color: #607744 !important;
+}
+
+a.show > .nav-link {
+  background-color: #607744 !important;
+}
+
 
 @media screen and (min-width: 610px) {
   .single-pet-container {

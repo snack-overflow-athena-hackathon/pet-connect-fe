@@ -1,26 +1,31 @@
 import { PetCard } from "./ PetCard";
-import { useState, useEffect} from 'react';
-import { fetchAllPets } from "../data/data";
-import { data } from "../data/data";
+import { useState, useEffect } from "react";
+import { fetchAllPets } from "../utils/api";
 
 export const PetList = () => {
-    const [allPets, setAllPets] = useState([]);
+  const [allPets, setAllPets] = useState([]);
 
-    useEffect(() => {
-        // fetchAllPets().then((petsFromAPI) => {
-        //     setAllPets(petsFromAPI)
-        console.log(data)
+  useEffect(() => {
+    fetchAllPets().then((petsFromAPI) => {
+      setAllPets(petsFromAPI);
+    });
+  }, []);
 
-        setAllPets(data)
-        }, [])
+  console.log(allPets[0]);
 
-    return (
-        <ul className="PetList">
-            {allPets.map((pet, index) => {
-                return (
-                <PetCard pet_name={pet.pet_name} description={pet.description} img_url={pet.img_url} owner={pet.owner} key={index}/>
-                )
-            })}
-        </ul>
-    )
-}
+  return (
+    <ul className="PetList">
+      {allPets.map((pet, index) => {
+        return (
+          <PetCard
+            name={pet.name}
+            location={pet.location}
+            pictureUrl={pet.pictureUrl}
+            ownerId={pet.ownerId}
+            key={index}
+          />
+        );
+      })}
+    </ul>
+  );
+};

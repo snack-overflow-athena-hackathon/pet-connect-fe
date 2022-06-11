@@ -27,3 +27,16 @@
 .App-link {
   color: #61dafb;
 }
+
+.PetList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* @media screen and (min-width: 610px) {
+  .PetList {
+    flex-direction: column;
+  }
+} */

@@ -24,6 +24,24 @@
   color: white;
 }
 
+.App-logo {
+  width: 320px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.PetList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 610px) {
+  .single-pet-container {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+  }
 }

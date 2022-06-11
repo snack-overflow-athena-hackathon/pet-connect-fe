@@ -1,17 +1,15 @@
 import { PetCard } from "./ PetCard";
 import { useState, useEffect } from "react";
-import { fetchAllPets } from "../utils/api";
+import { getAllPets } from "../utils/api";
 
 export const PetList = () => {
   const [allPets, setAllPets] = useState([]);
 
   useEffect(() => {
-    fetchAllPets().then((petsFromAPI) => {
+    getAllPets().then((petsFromAPI) => {
       setAllPets(petsFromAPI);
     });
   }, []);
-
-  console.log(allPets[0]);
 
   return (
     <ul className="PetList">

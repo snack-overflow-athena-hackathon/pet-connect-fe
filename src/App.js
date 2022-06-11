@@ -1,11 +1,8 @@
 import "./App.css";
+import { Nav } from "./components/Nav";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">Pet Connect</header>
-    </div>
-  );
+  return <Nav />;
 }
 
 export default App;

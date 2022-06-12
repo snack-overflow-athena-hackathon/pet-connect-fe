@@ -15,10 +15,20 @@ export const Users = () => {
     });
   }, []);
 
-  console.log(isLoggedIn);
+  const handleLogout = () => {
+    setIsLoggedIn(null);
+    localStorage.clear();
+  };
 
   return (
     <>
+      {!isLoggedIn ? (
+        <Button variant="dark" onClick={handleLogout()}>
+          Log Out
+        </Button>
+      ) : (
+        <></>
+      )}
       {users.map((user) => {
         return (
           <div key={user.id}>
@@ -41,6 +51,7 @@ export const Users = () => {
                   variant="dark"
                   href="/"
                   onClick={() => {
+                    localStorage.setItem("user", user.id);
                     setIsLoggedIn(user.id);
                   }}
                 >

@@ -11,8 +11,21 @@ import { PetConnect } from "./components/PetConnect";
 import { SnackOverflow } from "./components/SnackOverflow";
 import { Resources } from "./components/Resources";
 import { Users } from "./components/Users";
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "./context/UserContext";
 
 function App() {
+  const { setIsLoggedIn } = useContext(UserContext);
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setIsLoggedIn(foundUser);
+    }
+  }, []);
+
   return (
     <>
       <div className="App">

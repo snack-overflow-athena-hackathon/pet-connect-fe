@@ -6,6 +6,7 @@ import { useContext } from "react";
 
 export const NavBar = () => {
   const { isLoggedIn } = useContext(UserContext);
+
   return (
     <>
       <header className="App-header">
@@ -34,7 +35,9 @@ export const NavBar = () => {
           <NavDropdown.Item eventKey="4.2">My Pets</NavDropdown.Item>
           <NavDropdown.Item eventKey="4.3">My Appointments</NavDropdown.Item>
           {isLoggedIn ? (
-            <NavDropdown.Item eventKey="4.4">Log Out</NavDropdown.Item>
+            <NavDropdown.Item eventKey="4.4" href="/login">
+              Log Out
+            </NavDropdown.Item>
           ) : (
             <>
               <NavDropdown.Divider />{" "}

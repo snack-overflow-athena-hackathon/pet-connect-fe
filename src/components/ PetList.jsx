@@ -19,6 +19,7 @@ export const PetList = () => {
             petName={pet.petName}
             location={pet.location}
             pictureUrl={pet.pictureUrl}
+            ownerDisplayName={pet.ownerDisplayName}
             ownerId={pet.ownerId}
             id={pet.id}
             key={index}

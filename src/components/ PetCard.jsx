@@ -1,7 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const PetCard = ({ petName, location, pictureUrl, ownerId, id }) => {
+export const PetCard = ({ petName, location, pictureUrl, ownerId, id, ownerDisplayName }) => {
   console.log(id);
 
   return (
@@ -30,7 +30,7 @@ export const PetCard = ({ petName, location, pictureUrl, ownerId, id }) => {
             }}
             to={`/users/${ownerId}`}
           >
-            {ownerId}
+            {ownerDisplayName}
           </Link>
         </Card.Text>
         <Link to={`/pets/${id}`}>

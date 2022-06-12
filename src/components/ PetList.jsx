@@ -16,7 +16,7 @@ export const PetList = () => {
       {allPets.map((pet, index) => {
         return (
           <PetCard
-            name={pet.name}
+            petName={pet.petName}
             location={pet.location}
             pictureUrl={pet.pictureUrl}
             ownerId={pet.ownerId}

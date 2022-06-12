@@ -1,7 +1,7 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const PetCard = ({ name, location, pictureUrl, ownerId, id }) => {
+export const PetCard = ({ petName, location, pictureUrl, ownerId, id }) => {
   console.log(id);
 
   return (
@@ -14,7 +14,9 @@ export const PetCard = ({ name, location, pictureUrl, ownerId, id }) => {
         />
       </Link>
       <Card.Body style={{ backgroundColor: "#607744" }}>
-        <Card.Title style={{ backgroundColor: "#607744" }}>{name}</Card.Title>
+        <Card.Title style={{ backgroundColor: "#607744" }}>
+          {petName}
+        </Card.Title>
         <Card.Text style={{ backgroundColor: "#607744" }}>
           Location: {location}
         </Card.Text>

@@ -16,7 +16,7 @@ export const UserPets = ({ id }) => {
       {userPets.map((pet, index) => {
         return (
           <PetCard
-            name={pet.petName}
+            petName={pet.petName}
             breed={pet.breed}
             pictureUrl={pet.pictureUrl}
             ownerId={id}

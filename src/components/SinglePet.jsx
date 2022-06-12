@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getSinglePet } from "../utils/api";
 import { Button, Card } from "react-bootstrap";
 
@@ -43,9 +43,11 @@ export const SinglePet = () => {
           <Button style={{ margin: "5px" }} variant="dark">
             Book A Pet Date
           </Button>
-          <Button style={{ margin: "5px" }} variant="dark">
-            View {pet.ownerId}
-          </Button>
+          <Link to={`/users/${pet.ownerId}`}>
+            <Button style={{ margin: "5px" }} variant="dark">
+              View {pet.ownerId}
+            </Button>
+          </Link>
           <Button style={{ margin: "5px" }} variant="dark">
             Contact {pet.ownerId}
           </Button>

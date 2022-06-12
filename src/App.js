@@ -5,6 +5,8 @@ import { PetList } from "./components/ PetList";
 import { Routes, Route } from "react-router-dom";
 import { SinglePet } from "./components/SinglePet";
 import { SingleUser } from "./components/SingleUser";
+import { PetConnect } from "./components/PetConnect";
+import { SnackOverflow } from "./components/SnackOverflow";
 
 function App() {
   return (
@@ -15,7 +17,8 @@ function App() {
           <Route path="/" element={<PetList />} />
           <Route path="/pets/:id" element={<SinglePet />} />
           <Route path="/users/:id" element={<SingleUser />} />
-
+          <Route path="/petconnect" element={<PetConnect />} />
+          <Route path="/snackoverflow" element={<SnackOverflow />} />
         </Routes>
       </div>
     </>

@@ -23,7 +23,7 @@ export const SinglePet = () => {
         />
         <Card.Body style={{ backgroundColor: "#607744" }}>
           <Card.Title style={{ backgroundColor: "#607744" }}>
-            {pet.name}
+            {pet.petName}
           </Card.Title>
           <Card.Text style={{ backgroundColor: "#607744" }}>
             {pet.location}

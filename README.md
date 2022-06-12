@@ -1,6 +1,10 @@
 # Pet Connect by Snack Overflow
 
-### Hosted on [Heroku](https://pet-api-fe.herokuapp.com/snackoverflow)
+#### Hosted on [Heroku](https://pet-api-fe.herokuapp.com/snackoverflow)
+
+### Colour Contrast
+
+We used a dark background to increase the comfort of the user. Maintaining this, we chose a forest green background on text elements, using white for the text colour to provide good contrast. This passes all tests for Large Text (18px/24px) on the [Colour Contrast Checker](https://colourcontrast.cc/607744/ffffff). We maintained font sizes of 18px and 24px where possible across the site.
 
 ## Creating A Local Copy
 

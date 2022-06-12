@@ -16,14 +16,15 @@ export const getSinglePet = (id) => {
   });
 };
 
-export const getSingleUser = (id) => {
-  return petConnectApi.get(`/Users/ByUserId/${id}`).then(({ data }) => {
+export const getPetByUserId = (id) => {
+  return petConnectApi.get(`/Users/${id}/Pets`).then(({ data }) => {
+    console.log(data)
     return data;
   })
 };
 
- export const getPetByUserId = (id) => {
-   return petConnectApi.get(`/Pets/ByUserId/${id}`).then(({ data }) => {
+ export const getUserById = (id) => {
+   return petConnectApi.get(`/Users/${id}`).then(({ data }) => {
      return data;
    })
  }

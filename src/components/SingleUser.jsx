@@ -1,21 +1,23 @@
 import { Card, Button } from "react-bootstrap";
 import { useParams } from "react-router";
-import { getSingleUser } from "../utils/api";
+import { getUserById } from "../utils/api";
 import { useEffect, useState } from "react";
 import { UserPets } from "./UserPets";
+import { PetCard } from "./ PetCard";
 
 export const SingleUser = () => {
   const [user, setUser] = useState({});
     const { id } = useParams();
 
   useEffect(() => {
-    getSingleUser(id).then((userFromApi) => {
+    getUserById(id).then((userFromApi) => {
       setUser(userFromApi);
     });
   }, [id]);
 
   return (
-    <div className="single-user-container">
+    <>
+        <div className="single-user-container">
       <Card>
         <Card.Img
           style={{ borderBottom: "1px solid white" }}
@@ -40,7 +42,11 @@ export const SingleUser = () => {
           </Button>
         </Card.Body>
       </Card>
-      <UserPets id={id}/>
     </div>
+    <div className="PetList">
+    <UserPets id={id} />
+    </div>
+    </>
+
   );
 };

@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PetList />} />
           <Route path="/pets/:id" element={<SinglePet />} />
-          <Route path="/user/:id" element={<SingleUser />} />
+          <Route path="/users/:id" element={<SingleUser />} />
 
         </Routes>
       </div>

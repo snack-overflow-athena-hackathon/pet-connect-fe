@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react" 
-import { Card, Button } from "react-bootstrap";
 import { getPetByUserId } from "../utils/api"
 import { PetCard } from "./ PetCard";
 
@@ -9,14 +8,16 @@ export const UserPets = ({ id }) => {
 
     useEffect(() => {
         getPetByUserId(id).then((petsFromApi) => {
+            console.log(id)
+            console.log(petsFromApi, "<<<< PETS FROM API")
             setUserPets(petsFromApi)
         })
-    })
+    }, [id])
 
     return (
-        userPets.map((userPet) => {
+        userPets.map((pet) => {
             return (
-                <PetCard name={userPet.name} location={userPet.location} pictureUrl={userPet.pictureUrl} ownerId={userPet.ownerId} />
+                <PetCard name={pet.petName} breed={pet.breed} pictureUrl={pet.pictureUrl} ownerId={pet.ownerId} />
             )
         })
     )

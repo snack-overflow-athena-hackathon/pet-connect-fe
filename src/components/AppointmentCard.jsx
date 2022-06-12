@@ -1,13 +1,18 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const AppointmentCard = ({ appointmentDateTimeUTC, ownerId, visitorId, petId, id  }) => {
+export const AppointmentCard = ({
+  appointmentDateTimeUTC,
+  ownerId,
+  visitorId,
+  petId,
+  id,
+}) => {
   console.log(id);
 
   return (
     <Card style={{ width: "18rem", margin: "15px" }}>
-      <Link to={`/Appointments/${id}`}>
-      </Link>
+      <Link to={`/Appointments/${id}`}></Link>
       <Card.Body style={{ backgroundColor: "#607744" }}>
         <Card.Title style={{ backgroundColor: "#607744" }}>
           Date and Time {appointmentDateTimeUTC}

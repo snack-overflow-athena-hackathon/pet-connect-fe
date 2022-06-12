@@ -6,6 +6,7 @@ import { useContext } from "react";
 
 export const NavBar = () => {
   const { isLoggedIn } = useContext(UserContext);
+
   return (
     <>
       <header className="App-header">
@@ -24,7 +25,9 @@ export const NavBar = () => {
         </Nav.Item>
         <NavDropdown title="My Profile" id="nav-dropdown">
           {!isLoggedIn ? (
-            <NavDropdown.Item eventKey="4.0">Sign In</NavDropdown.Item>
+            <NavDropdown.Item href="/login" eventKey="4.0">
+              Sign In
+            </NavDropdown.Item>
           ) : (
             <></>
           )}
@@ -32,7 +35,9 @@ export const NavBar = () => {
           <NavDropdown.Item eventKey="4.2">My Pets</NavDropdown.Item>
           <NavDropdown.Item eventKey="4.3">My Appointments</NavDropdown.Item>
           {isLoggedIn ? (
-            <NavDropdown.Item eventKey="4.4">Log Out</NavDropdown.Item>
+            <NavDropdown.Item eventKey="4.4" href="/login">
+              Log Out
+            </NavDropdown.Item>
           ) : (
             <>
               <NavDropdown.Divider />{" "}
@@ -48,22 +53,9 @@ export const NavBar = () => {
             SnackOverflow
           </NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item
-            eventKey="5.3"
-            href="https://beamery.com/"
-            target="_blank"
-          >
-            Beamery
+          <NavDropdown.Item href="/resources" eventKey="5.3">
+            Resources and Support
           </NavDropdown.Item>
-          <NavDropdown.Item
-            eventKey="5.4"
-            href="https://www.showcode.io/athena-hack-2022/"
-            target="_blank"
-          >
-            ShowCode's Athena Hackathon
-          </NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item eventKey="5.5">Other Resources</NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </>

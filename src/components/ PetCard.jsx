@@ -1,14 +1,22 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const PetCard = ({ petName, location, pictureUrl, ownerId, id, ownerDisplayName }) => {
-  console.log(id);
-
+export const PetCard = ({
+  petName,
+  location,
+  pictureUrl,
+  ownerId,
+  id,
+  ownerDisplayName,
+}) => {
   return (
     <Card style={{ width: "18rem", margin: "15px" }}>
       <Link to={`/pets/${id}`}>
         <Card.Img
-          style={{ borderBottom: "1px solid white", backgroundColor: "#a39594" }}
+          style={{
+            borderBottom: "1px solid white",
+            backgroundColor: "#a39594",
+          }}
           variant="top"
           src={pictureUrl}
         />
@@ -17,7 +25,7 @@ export const PetCard = ({ petName, location, pictureUrl, ownerId, id, ownerDispl
         <Card.Title style={{ backgroundColor: "#607744" }}>
           {petName}
         </Card.Title>
-        <Card.Text style={{ backgroundColor: "#607744" }}>
+        <Card.Text style={{ backgroundColor: "#607744", textAlign: "justify" }}>
           Location: {location}
         </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>

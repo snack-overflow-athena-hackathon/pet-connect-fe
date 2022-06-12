@@ -9,11 +9,22 @@ import { SingleUser } from "./components/SingleUser";
 import { SingleAppointment } from "./components/SingleAppointment";
 import { PetConnect } from "./components/PetConnect";
 import { SnackOverflow } from "./components/SnackOverflow";
-// import { UserContext } from './context/UserContext';
-// import { useContext } from 'react';
+import { Resources } from "./components/Resources";
+import { Users } from "./components/Users";
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "./context/UserContext";
 
 function App() {
-  // const {user} = useContext(UserContext)
+  const { setIsLoggedIn } = useContext(UserContext);
+
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      setIsLoggedIn(foundUser);
+    }
+  }, []);
 
   return (
     <>
@@ -27,6 +38,8 @@ function App() {
           <Route path="/appointments/:id" element={<SingleAppointment />} />
           <Route path="/petconnect" element={<PetConnect />} />
           <Route path="/snackoverflow" element={<SnackOverflow />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/login" element={<Users />} />
         </Routes>
       </div>
     </>

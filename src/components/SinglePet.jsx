@@ -46,7 +46,9 @@ export const SinglePet = () => {
           <Button href={`/`} style={{ margin: "5px" }} variant="dark">
             Book A Pet Date
           </Button>
-          <Button href={`/users/${pet.ownerId}`} style={{ margin: "5px" }} variant="dark">
+          <Button href={`/users/${pet.ownerId}`} 
+          style={{ margin: "5px" }} 
+          variant="dark">
             View {pet.ownerDisplayName}
           </Button>
           <Button href={`/`} style={{ margin: "5px" }} variant="dark">

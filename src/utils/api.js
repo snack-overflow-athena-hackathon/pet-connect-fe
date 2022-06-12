@@ -19,7 +19,7 @@ export const getSinglePet = (id) => {
 export const getPetByUserId = (id) => {
   return petConnectApi.get(`/Users/${id}/Pets`).then(({ data }) => {
     return data;
-  })
+  });
 };
 
 export const getAllAppointments = () => {
@@ -37,16 +37,20 @@ export const getSingleAppointment = (id) => {
 export const getAppointmentsByUserId = (id) => {
   return petConnectApi.get(`/Users/${id}/Appointments`).then(({ data }) => {
     return data;
-  })
+  });
 };
 
- export const getUserById = (id) => {
-   return petConnectApi.get(`/Users/${id}`).then(({ data }) => {
-     return data;
-   })
- }
+export const getUserById = (id) => {
+  return petConnectApi.get(`/Users/${id}`).then(({ data }) => {
+    return data;
+  });
+};
 
-
+export const getAllUsers = () => {
+  return petConnectApi.get("/Users").then(({ data }) => {
+    return data;
+  });
+};
 
 //  export const createNewUser(body) {
 //    return petConnectApi.post(`/users`, body).then((res) => {

@@ -16,7 +16,7 @@ export const getSinglePet = (id) => {
   });
 };
 
-export const getPetByUserId = (id) => {
+export const getPetsByUserId = (id) => {
   return petConnectApi.get(`/Users/${id}/Pets`).then(({ data }) => {
     return data;
   });

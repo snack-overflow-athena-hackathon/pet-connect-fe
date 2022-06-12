@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { getPetByUserId } from "../utils/api";
+import { getPetsByUserId } from "../utils/api";
 import { PetCard } from "./ PetCard";
 
 export const UserPets = ({ id }) => {
   const [userPets, setUserPets] = useState([]);
 
   useEffect(() => {
-    getPetByUserId(id).then((petsFromApi) => {
+    getPetsByUserId(id).then((petsFromApi) => {
       setUserPets(petsFromApi);
     });
   }, [id]);

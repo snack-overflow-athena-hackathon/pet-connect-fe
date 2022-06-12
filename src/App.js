@@ -16,6 +16,7 @@ import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
 import { MyAppointments } from "./components/MyAppointments"
 import { MyPets } from "./components/MyPets"
+import { MyProfile } from "./components/MyProfile"
 
 function App() {
   const { setIsLoggedIn } = useContext(UserContext);
@@ -44,6 +45,7 @@ function App() {
           <Route path="/login" element={<Users />} />
           <Route path="/myappointments" element={<MyAppointments />} />
           <Route path="/mypets" element={<MyPets />} />
+          <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
       </div>
     </>

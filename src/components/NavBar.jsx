@@ -48,7 +48,7 @@ export const NavBar = () => {
             SnackOverflow
           </NavDropdown.Item>
           <NavDropdown.Divider />
-          <NavDropdown.Item
+          {/* <NavDropdown.Item
             eventKey="5.3"
             href="https://beamery.com/"
             target="_blank"
@@ -62,8 +62,10 @@ export const NavBar = () => {
           >
             ShowCode's Athena Hackathon
           </NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item eventKey="5.5">Other Resources</NavDropdown.Item>
+          <NavDropdown.Divider /> */}
+          <NavDropdown.Item href="/resources" eventKey="5.3">
+            Resources and Support
+          </NavDropdown.Item>
         </NavDropdown>
       </Nav>
     </>

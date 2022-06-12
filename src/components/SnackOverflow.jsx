@@ -1,4 +1,4 @@
-import { Card, CarouselItem } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import piggies from "../images/bonnie-kittle.jpg";
 import pupper from "../images/karsten-winegeart.jpg";

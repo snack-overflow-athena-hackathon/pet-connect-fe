@@ -7,12 +7,9 @@ import { SinglePet } from "./components/SinglePet";
 import { SingleUser } from "./components/SingleUser";
 import { PetConnect } from "./components/PetConnect";
 import { SnackOverflow } from "./components/SnackOverflow";
-// import { UserContext } from './context/UserContext';
-// import { useContext } from 'react';
+import { Resources } from "./components/Resources";
 
 function App() {
-  // const {user} = useContext(UserContext)
-
   return (
     <>
       <div className="App">
@@ -23,6 +20,7 @@ function App() {
           <Route path="/users/:id" element={<SingleUser />} />
           <Route path="/petconnect" element={<PetConnect />} />
           <Route path="/snackoverflow" element={<SnackOverflow />} />
+          <Route path="/resources" element={<Resources />} />
         </Routes>
       </div>
     </>

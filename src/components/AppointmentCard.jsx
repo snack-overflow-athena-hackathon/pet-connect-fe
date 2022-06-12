@@ -26,20 +26,7 @@ export const AppointmentCard = ({
           Pet {petName}
         </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>
-          Made By:{" "}
-          <Link
-            style={{
-              backgroundColor: "#607744",
-              color: "#fff",
-              textDecoration: "none",
-            }}
-            to={`/users/${visitorId}`}
-          >
-            {visitorDisplayName}
-          </Link>
-        </Card.Text>
-        <Card.Text style={{ backgroundColor: "#607744" }}>
-          Pet belongs to:{" "}
+          Owner :{" "}
           <Link
             style={{
               backgroundColor: "#607744",
@@ -49,6 +36,19 @@ export const AppointmentCard = ({
             to={`/users/${ownerId}`}
           >
             {ownerDisplayName}
+          </Link>
+        </Card.Text>
+        <Card.Text style={{ backgroundColor: "#607744" }}>
+          Visitor:{" "}
+          <Link
+            style={{
+              backgroundColor: "#607744",
+              color: "#fff",
+              textDecoration: "none",
+            }}
+            to={`/users/${visitorId}`}
+          >
+            {visitorDisplayName}
           </Link>
         </Card.Text>
         <Button href={`/Appointments/${id}`} variant="dark">

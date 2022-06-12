@@ -20,6 +20,7 @@ export const UserPets = ({ id }) => {
             breed={pet.breed}
             pictureUrl={pet.pictureUrl}
             ownerId={id}
+            ownerDisplayName={pet.ownerDisplayName}
             id={pet.id}
             key={index}
           />

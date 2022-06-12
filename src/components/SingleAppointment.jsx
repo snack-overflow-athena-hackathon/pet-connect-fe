@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getSingleAppointment } from "../utils/api";
 import { Button, Card } from "react-bootstrap";
 
@@ -16,24 +16,28 @@ export const SingleAppointment = () => {
   return (
     <div className="single-appointment-container">
       <Card>
+        <Link to={`/pets/${id}`}>
+          <Card.Img
+            style={{
+              borderBottom: "1px solid white",
+              backgroundColor: "#a39594",
+            }}
+            variant="top"
+            src={appointment.petPictureUrl}
+          />
+        </Link>
         <Card.Body style={{ backgroundColor: "#607744" }}>
           <Card.Title style={{ backgroundColor: "#607744" }}>
-            Date and Time {appointment.appointmentDateTimeUTC}
+            {new Date(appointment.appointmentDateTimeUTC).toLocaleDateString()} @ {new Date(appointment.appointmentDateTimeUTC).toLocaleTimeString()}
           </Card.Title>
+          <Card.Text style={{ backgroundColor: "#607744" }}>
+            Pet {appointment.petName}
+          </Card.Text>
           <Card.Text style={{ backgroundColor: "#607744" }}>
             Owner {appointment.ownerDisplayName}
           </Card.Text>
           <Card.Text style={{ backgroundColor: "#607744" }}>
             Visitor {appointment.visitorDisplayName}
-          </Card.Text>
-          <Card.Text style={{ backgroundColor: "#607744" }}>
-            Pet {appointment.petName}
-          </Card.Text>
-          <Card.Text style={{ backgroundColor: "#607744" }}>
-            Location {appointment.locationId}
-          </Card.Text>
-          <Card.Text style={{ backgroundColor: "#607744" }}>
-            State {appointment.appointmentState}
           </Card.Text>
           <Button href={`/users/${appointment.visitorId}`} style={{ margin: "5px" }} variant="dark">
             View Visitor {appointment.visitorDisplayName}

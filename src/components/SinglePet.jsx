@@ -29,9 +29,6 @@ export const SinglePet = () => {
             {pet.petName}
           </Card.Title>
           <Card.Text style={{ backgroundColor: "#607744" }}>
-            {pet.location}
-          </Card.Text>
-          <Card.Text style={{ backgroundColor: "#607744" }}>
             {pet.type}
           </Card.Text>
           <Card.Text style={{ backgroundColor: "#607744" }}>

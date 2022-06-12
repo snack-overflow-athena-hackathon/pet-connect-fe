@@ -17,7 +17,7 @@ export const PetList = () => {
         return (
           <PetCard
             petName={pet.petName}
-            location={pet.location}
+            breed={pet.breed}
             pictureUrl={pet.pictureUrl}
             ownerDisplayName={pet.ownerDisplayName}
             ownerId={pet.ownerId}

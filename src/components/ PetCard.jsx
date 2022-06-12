@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 export const PetCard = ({
   petName,
-  location,
+  breed,
   pictureUrl,
   ownerId,
-  id,
   ownerDisplayName,
+  id
 }) => {
   return (
     <Card style={{ width: "18rem", margin: "15px" }}>
@@ -25,9 +25,9 @@ export const PetCard = ({
         <Card.Title style={{ backgroundColor: "#607744" }}>
           {petName}
         </Card.Title>
-        <Card.Text style={{ backgroundColor: "#607744", textAlign: "justify" }}>
-          Location: {location}
-        </Card.Text>
+        <Card.Title style={{ backgroundColor: "#607744" }}>
+          ({breed})
+        </Card.Title>
         <Card.Text style={{ backgroundColor: "#607744" }}>
           Belongs to:{" "}
           <Link

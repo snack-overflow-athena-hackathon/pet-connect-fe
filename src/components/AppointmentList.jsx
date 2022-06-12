@@ -20,6 +20,7 @@ export const AppointmentList = () => {
             ownerDisplayName={appointment.ownerDisplayName}
             visitorDisplayName={appointment.visitorDisplayName}
             petName={appointment.petName}
+            petPictureUrl={appointment.petPictureUrl}
             id={appointment.id}
             key={index}
           />

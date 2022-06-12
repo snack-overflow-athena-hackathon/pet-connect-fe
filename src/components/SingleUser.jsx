@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import { getUserById } from "../utils/api";
 import { useEffect, useState } from "react";
 import { UserPets } from "./UserPets";
-import { PetCard } from "./ PetCard";
+// import { PetCard } from "./ PetCard";
 
 export const SingleUser = () => {
   const [user, setUser] = useState({});
@@ -43,10 +43,7 @@ export const SingleUser = () => {
         </Card.Body>
       </Card>
     </div>
-    <div className="PetList">
     <UserPets id={id} />
-    </div>
     </>
-
   );
 };

@@ -19,11 +19,31 @@ export const NavBar = () => {
         </Link>
       </header>
 
-      <Nav style={{ margin: "15px" }} variant="pills" defaultActiveKey="/">
+      <Nav style={{ margin: "15px" }} variant="pills">
         <Nav.Item>
-          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link
+            to="/contact"
+            className={({ isActive }) => (isActive ? "link-active" : "link")}
+            href="/"
+          >
+            Home
+          </Nav.Link>
         </Nav.Item>
-        <NavDropdown title="My Profile" id="nav-dropdown">
+        <Nav.Item>
+          <Nav.Link
+            to="/contact"
+            className={({ isActive }) => (isActive ? "link-active" : "link")}
+            href="/appointments"
+          >
+            Appointments
+          </Nav.Link>
+        </Nav.Item>
+        <NavDropdown
+          to="/contact"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+          title="My Profile"
+          id="nav-dropdown"
+        >
           {!isLoggedIn ? (
             <NavDropdown.Item href="/login" eventKey="4.0">
               Sign In
@@ -33,7 +53,7 @@ export const NavBar = () => {
           )}
           <NavDropdown.Item eventKey="4.1">My Profile</NavDropdown.Item>
           <NavDropdown.Item eventKey="4.2">My Pets</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.3">My Appointments</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.3" href="/myappointments">My Appointments</NavDropdown.Item>
           {isLoggedIn ? (
             <NavDropdown.Item eventKey="4.4" href="/login">
               Log Out
@@ -45,7 +65,12 @@ export const NavBar = () => {
             </>
           )}
         </NavDropdown>
-        <NavDropdown title="About" id="nav-dropdown">
+        <NavDropdown
+          to="/contact"
+          className={({ isActive }) => (isActive ? "link-active" : "link")}
+          title="About"
+          id="nav-dropdown"
+        >
           <NavDropdown.Item href="/petconnect" eventKey="5.1">
             PetConnect
           </NavDropdown.Item>

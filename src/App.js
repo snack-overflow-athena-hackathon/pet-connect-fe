@@ -14,6 +14,7 @@ import { Users } from "./components/Users";
 import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { UserContext } from "./context/UserContext";
+import { MyAppointments } from "./components/MyAppointments"
 
 function App() {
   const { setIsLoggedIn } = useContext(UserContext);
@@ -32,7 +33,7 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<PetList />} />
-          <Route path="/appointments/" element={<AppointmentList />} />
+          <Route path="/appointments" element={<AppointmentList />} />
           <Route path="/pets/:id" element={<SinglePet />} />
           <Route path="/users/:id" element={<SingleUser />} />
           <Route path="/appointments/:id" element={<SingleAppointment />} />
@@ -40,6 +41,7 @@ function App() {
           <Route path="/snackoverflow" element={<SnackOverflow />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/login" element={<Users />} />
+          <Route path="/myappointments" element={<MyAppointments />} />
         </Routes>
       </div>
     </>

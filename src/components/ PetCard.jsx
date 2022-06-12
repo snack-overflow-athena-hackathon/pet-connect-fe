@@ -1,9 +1,14 @@
 import { Card, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const PetCard = ({ petName, location, pictureUrl, ownerId, id, ownerDisplayName }) => {
-  console.log(id);
-
+export const PetCard = ({
+  petName,
+  location,
+  pictureUrl,
+  ownerId,
+  id,
+  ownerDisplayName,
+}) => {
   return (
     <Card style={{ width: "18rem", margin: "15px" }}>
       <Link to={`/pets/${id}`}>

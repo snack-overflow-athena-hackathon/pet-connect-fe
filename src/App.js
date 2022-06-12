@@ -10,6 +10,7 @@ import { SingleAppointment } from "./components/SingleAppointment";
 import { PetConnect } from "./components/PetConnect";
 import { SnackOverflow } from "./components/SnackOverflow";
 import { Resources } from "./components/Resources";
+import { Users } from "./components/Users";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/petconnect" element={<PetConnect />} />
           <Route path="/snackoverflow" element={<SnackOverflow />} />
           <Route path="/resources" element={<Resources />} />
+          <Route path="/login" element={<Users />} />
         </Routes>
       </div>
     </>

@@ -24,7 +24,9 @@ export const NavBar = () => {
         </Nav.Item>
         <NavDropdown title="My Profile" id="nav-dropdown">
           {!isLoggedIn ? (
-            <NavDropdown.Item eventKey="4.0">Sign In</NavDropdown.Item>
+            <NavDropdown.Item href="/login" eventKey="4.0">
+              Sign In
+            </NavDropdown.Item>
           ) : (
             <></>
           )}

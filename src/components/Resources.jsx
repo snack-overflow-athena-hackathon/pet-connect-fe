@@ -1,5 +1,5 @@
 import { Card, Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import support from "../images/support.png";
 
 export const Resources = () => {

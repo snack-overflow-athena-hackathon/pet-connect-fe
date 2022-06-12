@@ -41,9 +41,9 @@ export const AppointmentCard = ({ appointmentDateTimeUTC, ownerId, visitorId, pe
             {ownerId}
           </Link>
         </Card.Text>
-        <Link to={`/Appointments/${id}`}>
-          <Button variant="dark">View Full Appointment</Button>
-        </Link>
+        <Button href={`/Appointments/${id}`} variant="dark">
+          View Full Appointment
+        </Button>
       </Card.Body>
     </Card>
   );

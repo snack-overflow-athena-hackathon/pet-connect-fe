@@ -33,9 +33,9 @@ export const PetCard = ({ petName, location, pictureUrl, ownerId, id, ownerDispl
             {ownerDisplayName}
           </Link>
         </Card.Text>
-        <Link to={`/pets/${id}`}>
-          <Button variant="dark">View Pet</Button>
-        </Link>
+        <Button href={`/Pets/${id}`} variant="dark">
+          View {petName}
+        </Button>
       </Card.Body>
     </Card>
   );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { getSingleAppointment } from "../utils/api";
 import { Button, Card } from "react-bootstrap";
 
@@ -35,16 +35,12 @@ export const SingleAppointment = () => {
           <Card.Text style={{ backgroundColor: "#607744" }}>
             State {appointment.appointmentState}
           </Card.Text>
-          <Link to={`/users/${appointment.visitorId}`}>
-            <Button style={{ margin: "5px" }} variant="dark">
-              View Visitor {appointment.visitorId}
-            </Button>
-          </Link>
-          <Link to={`/users/${appointment.ownerId}`}>
-            <Button style={{ margin: "5px" }} variant="dark">
-              View Owner {appointment.ownerId}
-            </Button>
-          </Link>
+          <Button href={`/users/${appointment.visitorId}`} style={{ margin: "5px" }} variant="dark">
+            View Visitor {appointment.visitorId}
+          </Button>
+          <Button href={`/users/${appointment.ownerId}`} style={{ margin: "5px" }} variant="dark">
+            View Owner {appointment.ownerId}
+          </Button>
         </Card.Body>
       </Card>
     </div>

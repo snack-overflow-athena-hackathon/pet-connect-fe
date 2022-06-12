@@ -17,7 +17,10 @@ export const SinglePet = () => {
     <div className="single-pet-container">
       <Card>
         <Card.Img
-          style={{ borderBottom: "1px solid white" }}
+          style={{
+            borderBottom: "1px solid white",
+            backgroundColor: "#a39594",
+          }}
           variant="top"
           src={pet.pictureUrl}
         />

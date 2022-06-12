@@ -33,6 +33,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 0;
 }
 
 a {
@@ -75,18 +76,18 @@ a.show > .nav-link {
   background-color: #607744 !important;
 }
 
-@media screen and (min-width: 610px) {
+@media screen and (min-width: 599px) {
   .single-user-container,
   .single-pet-container {
     display: flex;
     align-items: center;
-    max-width: 800px;
+    max-width: 600px;
   }
 
   .about-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 800px;
+    max-width: 600px;
   }
 }

@@ -1,5 +1,7 @@
 # Pet Connect by Snack Overflow
 
+### Hosted on [Heroku](https://pet-api-fe.herokuapp.com/snackoverflow)
+
 ## Creating A Local Copy
 
 ### ✔️ 1. CLONE THE REPO

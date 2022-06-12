@@ -26,7 +26,7 @@ export const SingleUser = () => {
           />
           <Card.Body style={{ backgroundColor: "#607744" }}>
             <Card.Title style={{ backgroundColor: "#607744" }}>
-              {user.name} ({user.pronouns})
+              {user.displayName}
             </Card.Title>
             <Card.Text style={{ backgroundColor: "#607744" }}>
               {user.location}

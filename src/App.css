@@ -39,6 +39,7 @@
 a {
   color: #fff;
   text-decoration: underline;
+  font-size: 18px !important;
 }
 
 ::after {
@@ -52,6 +53,7 @@ a.nav-link {
 a.nav-link.active {
   background-color: #607744 !important;
   color: white !important;
+  font-size: 18px !important;
 }
 
 .dropdown-item.active,
@@ -94,6 +96,10 @@ a.show > .nav-link {
     display: flex;
     align-items: center;
     max-width: 600px;
+  }
+
+  .PetList {
+    max-width: 1000px;
   }
 
   .about-container {

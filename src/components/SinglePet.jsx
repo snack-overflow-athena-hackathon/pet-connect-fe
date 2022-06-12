@@ -17,7 +17,10 @@ export const SinglePet = () => {
     <div className="single-pet-container">
       <Card>
         <Card.Img
-          style={{ borderBottom: "1px solid white" }}
+          style={{
+            borderBottom: "1px solid white",
+            backgroundColor: "#a39594",
+          }}
           variant="top"
           src={pet.pictureUrl}
         />
@@ -45,11 +48,11 @@ export const SinglePet = () => {
           </Button>
           <Link to={`/users/${pet.ownerId}`}>
             <Button style={{ margin: "5px" }} variant="dark">
-              View {pet.ownerId}
+              View {pet.ownerDisplayName}
             </Button>
           </Link>
           <Button style={{ margin: "5px" }} variant="dark">
-            Contact {pet.ownerId}
+            Contact {pet.ownerDisplayName}
           </Button>
         </Card.Body>
       </Card>

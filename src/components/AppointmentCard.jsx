@@ -23,10 +23,10 @@ export const AppointmentCard = ({
           Time: {new Date(appointmentDateTimeUTC).toLocaleTimeString()}
         </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>
-          Pet {petName}
+          Pet: {petName}
         </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>
-          Owner :{" "}
+          Owner:{" "}
           <Link
             style={{
               backgroundColor: "#607744",

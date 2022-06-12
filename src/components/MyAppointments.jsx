@@ -34,8 +34,11 @@ export const MyAppointments = () => {
           <AppointmentCard
             appointmentDateTimeUTC={appointment.appointmentDateTimeUTC}
             ownerId={appointment.ownerId}
+            ownerDisplayName={appointment.ownerDisplayName}
             visitorId={appointment.visitorId}
+            visitorDisplayName={appointment.visitorDisplayName}
             petId={appointment.petId}
+            petName={appointment.petName}
             id={appointment.id}
             key={index}
           />

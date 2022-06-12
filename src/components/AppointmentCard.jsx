@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 export const AppointmentCard = ({
   appointmentDateTimeUTC,
   ownerId,
+  ownerDisplayName,
   visitorId,
+  visitorDisplayName,
   petId,
+  petName,
   id,
 }) => {
 
@@ -20,7 +23,7 @@ export const AppointmentCard = ({
           Time: {new Date(appointmentDateTimeUTC).toLocaleTimeString()}
         </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>
-          Pet {petId}
+          Pet {petName}
         </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>
           Made By:{" "}
@@ -32,7 +35,7 @@ export const AppointmentCard = ({
             }}
             to={`/users/${visitorId}`}
           >
-            {visitorId}
+            {visitorDisplayName}
           </Link>
         </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>
@@ -45,7 +48,7 @@ export const AppointmentCard = ({
             }}
             to={`/users/${ownerId}`}
           >
-            {ownerId}
+            {ownerDisplayName}
           </Link>
         </Card.Text>
         <Button href={`/Appointments/${id}`} variant="dark">

@@ -21,13 +21,13 @@ export const SingleAppointment = () => {
             Date and Time {appointment.appointmentDateTimeUTC}
           </Card.Title>
           <Card.Text style={{ backgroundColor: "#607744" }}>
-            Owner {appointment.ownerId}
+            Owner {appointment.ownerDisplayName}
           </Card.Text>
           <Card.Text style={{ backgroundColor: "#607744" }}>
-            Visitor {appointment.visitorId}
+            Visitor {appointment.visitorDisplayName}
           </Card.Text>
           <Card.Text style={{ backgroundColor: "#607744" }}>
-            Pet {appointment.petId}
+            Pet {appointment.petName}
           </Card.Text>
           <Card.Text style={{ backgroundColor: "#607744" }}>
             Location {appointment.locationId}
@@ -36,10 +36,10 @@ export const SingleAppointment = () => {
             State {appointment.appointmentState}
           </Card.Text>
           <Button href={`/users/${appointment.visitorId}`} style={{ margin: "5px" }} variant="dark">
-            View Visitor {appointment.visitorId}
+            View Visitor {appointment.visitorDisplayName}
           </Button>
           <Button href={`/users/${appointment.ownerId}`} style={{ margin: "5px" }} variant="dark">
-            View Owner {appointment.ownerId}
+            View Owner {appointment.ownerDisplayName}
           </Button>
         </Card.Body>
       </Card>

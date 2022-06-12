@@ -48,21 +48,6 @@ export const NavBar = () => {
             SnackOverflow
           </NavDropdown.Item>
           <NavDropdown.Divider />
-          {/* <NavDropdown.Item
-            eventKey="5.3"
-            href="https://beamery.com/"
-            target="_blank"
-          >
-            Beamery
-          </NavDropdown.Item>
-          <NavDropdown.Item
-            eventKey="5.4"
-            href="https://www.showcode.io/athena-hack-2022/"
-            target="_blank"
-          >
-            ShowCode's Athena Hackathon
-          </NavDropdown.Item>
-          <NavDropdown.Divider /> */}
           <NavDropdown.Item href="/resources" eventKey="5.3">
             Resources and Support
           </NavDropdown.Item>

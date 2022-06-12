@@ -36,6 +36,14 @@
   padding: 0;
 }
 
+.AppointmentList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+}
+
 a {
   color: #fff;
   text-decoration: underline;
@@ -80,6 +88,7 @@ a.show > .nav-link {
 
 @media screen and (min-width: 599px) {
   .single-user-container,
+  .single-appointment-container,
   .single-pet-container {
     display: flex;
     align-items: center;
@@ -87,6 +96,10 @@ a.show > .nav-link {
   }
 
   .PetList {
+    max-width: 1000px;
+  }
+
+  .AppointmentList {
     max-width: 1000px;
   }
 

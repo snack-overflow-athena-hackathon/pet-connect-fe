@@ -76,6 +76,7 @@ a.show > .nav-link {
 }
 
 @media screen and (min-width: 610px) {
+  .single-user-container,
   .single-pet-container {
     display: flex;
     align-items: center;

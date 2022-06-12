@@ -4,6 +4,7 @@ import { NavBar } from "./components/NavBar";
 import { PetList } from "./components/ PetList";
 import { Routes, Route } from "react-router-dom";
 import { SinglePet } from "./components/SinglePet";
+import { SingleUser } from "./components/SingleUser";
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
         <Routes>
           <Route path="/" element={<PetList />} />
           <Route path="/pets/:id" element={<SinglePet />} />
+          <Route path="/users/:id" element={<SingleUser />} />
+
         </Routes>
       </div>
     </>

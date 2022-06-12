@@ -6,14 +6,24 @@ const petConnectApi = axios.create({
 
 export const getAllPets = () => {
   return petConnectApi.get("/Pets").then(({ data }) => {
-    // console.log(data);
     return data;
   });
 };
 
 export const getSinglePet = (id) => {
   return petConnectApi.get(`/Pets/${id}`).then(({ data }) => {
-    console.log(data);
     return data;
   });
 };
+
+export const getPetByUserId = (id) => {
+  return petConnectApi.get(`/Users/${id}/Pets`).then(({ data }) => {
+    return data;
+  })
+};
+
+ export const getUserById = (id) => {
+   return petConnectApi.get(`/Users/${id}`).then(({ data }) => {
+     return data;
+   })
+ }

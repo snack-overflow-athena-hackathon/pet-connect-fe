@@ -8,7 +8,6 @@ export const AppointmentCard = ({
   petId,
   id,
 }) => {
-  console.log(id);
 
   return (
     <Card style={{ width: "18rem", margin: "15px" }}>

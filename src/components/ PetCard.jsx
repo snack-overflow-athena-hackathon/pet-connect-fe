@@ -8,7 +8,7 @@ export const PetCard = ({ petName, location, pictureUrl, ownerId, id }) => {
     <Card style={{ width: "18rem", margin: "15px" }}>
       <Link to={`/pets/${id}`}>
         <Card.Img
-          style={{ borderBottom: "1px solid white" }}
+          style={{ borderBottom: "1px solid white", backgroundColor: "#a39594" }}
           variant="top"
           src={pictureUrl}
         />

@@ -27,3 +27,11 @@ export const getPetByUserId = (id) => {
      return data;
    })
  }
+
+
+
+//  export const createNewUser(body) {
+//    return petConnectApi.post(`/users`, body).then((res) => {
+//      return res
+//    })
+//  }

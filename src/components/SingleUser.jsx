@@ -40,7 +40,9 @@ export const SingleUser = () => {
           </Card.Body>
         </Card>
       </div>
+      <div>
       <UserPets id={id} />
+      </div>
     </>
   );
 };

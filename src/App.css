@@ -58,9 +58,15 @@ a.nav-link {
   color: #607744 !important;
 }
 
-a.nav-link.active {
-  background-color: #607744 !important;
-  color: white !important;
+.link {
+  color: white;
+}
+
+.link-active {
+  /* 
+a.nav-link.active { */
+  background-color: #282c34 !important;
+  color: #607744 !important;
   font-size: 18px !important;
 }
 

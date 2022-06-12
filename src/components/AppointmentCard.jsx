@@ -14,12 +14,15 @@ export const AppointmentCard = ({
     <Card style={{ width: "18rem", margin: "15px" }}>
       <Link to={`/Appointments/${id}`}></Link>
       <Card.Body style={{ backgroundColor: "#607744" }}>
-        <Card.Title style={{ backgroundColor: "#607744" }}>
-          Date and Time {appointmentDateTimeUTC}
-        </Card.Title>
-        <Card.Title style={{ backgroundColor: "#607744" }}>
+        <Card.Text style={{ backgroundColor: "#607744" }}>
+          Date: {new Date(appointmentDateTimeUTC).toLocaleDateString()}
+        </Card.Text>
+        <Card.Text style={{ backgroundColor: "#607744" }}>
+          Time: {new Date(appointmentDateTimeUTC).toLocaleTimeString()}
+        </Card.Text>
+        <Card.Text style={{ backgroundColor: "#607744" }}>
           Pet {petId}
-        </Card.Title>
+        </Card.Text>
         <Card.Text style={{ backgroundColor: "#607744" }}>
           Made By:{" "}
           <Link

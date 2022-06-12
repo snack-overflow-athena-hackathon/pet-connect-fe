@@ -43,17 +43,15 @@ export const SinglePet = () => {
           <Card.Text style={{ backgroundColor: "#607744" }}>
             {pet.bio}
           </Card.Text>
-          <Button style={{ margin: "5px" }} variant="dark">
+          <Button href={`/`} style={{ margin: "5px" }} variant="dark">
             Book A Pet Date
           </Button>
-          <Button
-            href={`/users/${pet.ownerId}`}
-            style={{ margin: "5px" }}
-            variant="dark"
-          >
+          <Button href={`/users/${pet.ownerId}`} 
+          style={{ margin: "5px" }} 
+          variant="dark">
             View {pet.ownerDisplayName}
           </Button>
-          <Button style={{ margin: "5px" }} variant="dark">
+          <Button href={`/`} style={{ margin: "5px" }} variant="dark">
             Contact {pet.ownerDisplayName}
           </Button>
         </Card.Body>

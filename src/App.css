@@ -82,4 +82,11 @@ a.show > .nav-link {
     align-items: center;
     max-width: 800px;
   }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+  }
 }

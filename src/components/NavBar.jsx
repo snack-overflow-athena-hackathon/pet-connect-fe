@@ -25,8 +25,12 @@ export const NavBar = () => {
           <NavDropdown.Item eventKey="4.3">My Appointments</NavDropdown.Item>
         </NavDropdown>
         <NavDropdown title="About" id="nav-dropdown">
-          <NavDropdown.Item eventKey="5.1">PetConnect</NavDropdown.Item>
-          <NavDropdown.Item eventKey="5.2">SnackOverflow</NavDropdown.Item>
+          <NavDropdown.Item href="/petconnect" eventKey="5.1">
+            PetConnect
+          </NavDropdown.Item>
+          <NavDropdown.Item href="/snackoverflow" eventKey="5.2">
+            SnackOverflow
+          </NavDropdown.Item>
           <NavDropdown.Divider />
           <NavDropdown.Item
             eventKey="5.3"

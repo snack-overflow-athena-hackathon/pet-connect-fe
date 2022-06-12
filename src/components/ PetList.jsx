@@ -20,6 +20,7 @@ export const PetList = () => {
             location={pet.location}
             pictureUrl={pet.pictureUrl}
             ownerId={pet.ownerId}
+            id={pet.id}
             key={index}
           />
         );

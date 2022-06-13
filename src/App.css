@@ -71,8 +71,6 @@ a.nav-link {
 }
 
 .link-active {
-  /* 
-a.nav-link.active { */
   background-color: #282c34 !important;
   color: #607744 !important;
   font-size: 18px !important;
@@ -110,6 +108,14 @@ a.show > .nav-link {
   font-size: 24px !important;
   text-align: center !important;
   margin: 2px 2px 4px !important;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 599px) {

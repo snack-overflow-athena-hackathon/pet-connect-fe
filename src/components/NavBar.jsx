@@ -19,7 +19,7 @@ export const NavBar = () => {
         </Link>
       </header>
 
-      <Nav style={{ margin: "15px" }} variant="pills">
+      <Nav className="nav-container" style={{ margin: "15px" }} variant="pills">
         <Nav.Item>
           <Nav.Link
             to="/contact"
@@ -51,9 +51,15 @@ export const NavBar = () => {
           ) : (
             <></>
           )}
-          <NavDropdown.Item eventKey="4.1" href="/myprofile">My Profile</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.2" href="/mypets">My Pets</NavDropdown.Item>
-          <NavDropdown.Item eventKey="4.3" href="/myappointments">My Appointments</NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.1" href="/myprofile">
+            My Profile
+          </NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.2" href="/mypets">
+            My Pets
+          </NavDropdown.Item>
+          <NavDropdown.Item eventKey="4.3" href="/myappointments">
+            My Appointments
+          </NavDropdown.Item>
           {isLoggedIn ? (
             <NavDropdown.Item eventKey="4.4" href="/login">
               Log Out

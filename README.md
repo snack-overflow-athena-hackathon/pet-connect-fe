@@ -31,10 +31,19 @@ $ npm install
 ```
 
 ### ✔️ 3. USAGE
-![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)
+![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 Start the app locally with:
 ```
 $ npm start
 ```
 Your default browser will be used to display the site.
+
+## Node.js
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white) 
+
+This project was created using:
+```
+$ node -v | v17.8.0
+```
+It is recommended to upgrade to the latest version before running this locally.

@@ -15,7 +15,7 @@ We used a dark background to increase the visual comfort of the user. Maintainin
 ## Creating A Local Copy
 
 ### ✔️ 1. CLONE THE REPO
-![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 Terminal Commands:
 ```

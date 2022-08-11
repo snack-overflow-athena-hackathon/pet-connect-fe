@@ -29,7 +29,7 @@ Equally, we felt it was crucial to use mobile first design, as it may be that di
 
 ### Colour Contrast
 
-We used a dark background to increase the visual comfort of the user. With this in mind, we chose a forest green background on text elements, using white for the text colour to provide good contrast. This passes all tests for Large Text (18px/24px) on the [Colour Contrast Checker](https://colourcontrast.cc/607744/ffffff). We maintained font sizes of 18px and 24px where possible across the site.
+We used a dark background to increase the visual comfort of the user. With this in mind, we chose a forest green background on text elements, using white for the text colour to provide good contrast. This meets WCAG level AAA for Large Text (18px/24px) on the [Colour Contrast Checker](https://colourcontrast.cc/607744/ffffff). With that in mind, we maintained font sizes of 18px and 24px where possible across the site.
 
 <img src="https://github.com/snack-overflow-athena-hackathon/pet-connect-fe/blob/main/src/images/ccdark.png" width=49% alt="Contrast Dark Background With Green Text"> <img src="https://github.com/snack-overflow-athena-hackathon/pet-connect-fe/blob/main/src/images/cclight.png" width=49% alt="Contrast Green Background With White Text">
 
